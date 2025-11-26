@@ -8,14 +8,14 @@ Esta guía documenta el proceso completo para limpiar, reorganizar y optimizar u
 
 ## Tabla de Contenidos
 
-1. [Análisis Inicial del Sistema](#análisis-inicial)
-2. [Limpieza de Docker](#limpieza-docker)
-3. [Reorganización de Directorios](#reorganización)
-4. [Compactación de Disco VMware](#compactación-vmware)
-5. [Solución de Problemas Comunes](#troubleshooting)
+1. [Análisis Inicial del Sistema](#análisis-inicial-del-sistema)
+2. [Limpieza de Docker](#limpieza-de-docker)
+3. [Reorganización de Directorios](#reorganización-de-directorios)
+4. [Compactación de Disco VMware](#compactación-de-disco-vmware)
+5. [Solución de Problemas Comunes](#solución-de-problemas-comunes)
 6. [Mejores Prácticas](#mejores-prácticas)
 
-## Análisis Inicial del Sistema {#análisis-inicial}
+## Análisis Inicial del Sistema
 
 ### Comandos de Diagnóstico Fundamentales
 
@@ -49,7 +49,7 @@ Los comandos anteriores te proporcionarán:
 /home/usuario/.cache/              713MB
 ```
 
-## Limpieza de Docker {#limpieza-docker}
+## Limpieza de Docker
 
 ### Limpieza Segura (sin afectar proyectos activos)
 
@@ -93,7 +93,7 @@ minikube delete 2>/dev/null
 rm -rf ~/.minikube
 ```
 
-## Reorganización de Directorios {#reorganización}
+## Reorganización de Directorios
 
 ### Principios de Organización
 
@@ -136,7 +136,7 @@ sudo chown -R $USER:$USER ~/proyecto/db/
 ls -la ~/proyecto/db/data/
 ```
 
-## Compactación de Disco VMware {#compactación-vmware}
+## Compactación de Disco VMware
 
 ### Proceso de Preparación en Guest
 
@@ -188,7 +188,7 @@ cd "C:\Program Files (x86)\VMware\VMware Workstation"
 vmware-vdiskmanager.exe -k "ruta\completa\a\tu\archivo.vmdk"
 ```
 
-## Solución de Problemas Comunes {#troubleshooting}
+## Solución de Problemas Comunes
 
 ### Error: "La reducción de disco está deshabilitada"
 
@@ -212,7 +212,7 @@ sudo rm -rf directorio_problematico/
 sudo chown -R $USER:$USER directorio/
 ```
 
-### Proceso dd Lento
+### Proceso dd Muy Lento
 
 Es normal que el proceso tome tiempo. Para monitorear:
 
@@ -224,7 +224,7 @@ watch -n 5 'df -h /'
 pidof dd | xargs -I {} sudo kill -USR1 {}
 ```
 
-## Mejores Prácticas {#mejores-prácticas}
+## Mejores Prácticas
 
 ### Mantenimiento Preventivo
 
